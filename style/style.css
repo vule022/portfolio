@@ -25,7 +25,7 @@ body {
 #hamburger {
   display: none;
   position: fixed;
-  z-index: 9;
+  z-index: 99;
   top: 20px;
   left: 20px;
 }
@@ -273,7 +273,7 @@ body {
     position: fixed;
     width: 100% !important;
     height: 100vh;
-    z-index: 99999;
+    z-index: 9;
   }
   .app {
     height: 100%;
