@@ -1,0 +1,244 @@
+$background: rgb(34, 143, 92);
+$menu: #222629;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+hr{
+    background-color: rgb(110, 204, 110);
+    border: 2px solid rgb(110, 204, 110);
+}
+body{
+    background: $background;
+    box-shadow: inset 0 0 30px #000000;
+}
+.app{
+    display: flex;
+    height: 100vh;
+}
+#hamburger{
+    display: none;
+    position: fixed;
+    z-index: 9;
+    top: 20px;
+    left: 20px;
+}
+.menu{
+    box-shadow: inset 0 0 10px #000000;
+    position: relative;
+    background: $menu;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex: 1;
+    color: white;
+    img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 4px solid white;
+    }
+    .link{
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        border-radius: 10px;
+        a{
+            padding-left: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        &:hover{
+            cursor: pointer;
+            box-shadow: inset 0 0 10px #000000;
+            border-radius: 10px;
+        }
+    }
+    .active{
+        box-shadow: inset 0 0 10px #000000;
+    }
+}
+.content{
+    flex: 3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    h1{
+        font-size: 50px;
+        padding-top: 30px;
+    }
+    p{
+        font-size: 20px;
+    }
+    .about, .skills, .projects{
+        width: 80%;
+    }
+    .skills{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 50px;
+        text-transform: uppercase;
+        div{
+            flex-basis: 20%;
+        }
+    }
+
+
+    .projects{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        div{
+            position: relative;
+            flex-basis: 33%;
+            margin-top: 30px;
+            img{
+                width: 300px;
+                height: 300px;
+                border-radius: 20px;
+                background-color: white;
+
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.7;
+                }
+            }
+            
+        }
+        
+    }
+    .remove{
+        display: none;
+    }
+
+    .contact{
+        // input{
+        //     width: 80%;
+        //     height: 50px;
+        //     border: none;
+        //     border-radius: 10px;
+        //     margin-top: 20px;
+        //     text-align: center;
+        // }
+        // input[type="submit"]{
+        //     background: $menu;
+        //     color: white;
+
+        //     &:hover{
+        //         cursor: pointer;
+        //         box-shadow: inset 0 0 20px #000000;
+        //     }
+        // }
+        // textarea{
+        //     width: 80%;
+        //     border: none;
+        //     margin-top: 20px;
+        //     border-radius: 10px;
+        //     text-align: center;
+        // }
+
+        ul{
+            padding-top: 50px;
+            list-style: none;
+
+            li{
+                font-size: 20px;
+                padding-top: 10px;
+                a{
+                    font-size: 20px;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.modal{
+    width: 100%;
+    height: 100vh;
+    background: #0000008f;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    .modal-container{
+        width: 80%;
+        background: white;
+        text-align: center;
+    }
+    p{
+        margin-bottom: 20px;
+    }
+    a{
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        border-bottom: 1px solid rgb(110, 204, 110);
+        background: $background;
+    }
+    img{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        width: 500px;
+        height: 300px;
+    }
+    button{
+        width: 300px;
+        height: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        border: none;
+        background: rgb(221, 98, 98);
+        color: white;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .modal{
+        position: fixed;
+
+        img{
+            width: 100%;
+        }
+    }
+    #hamburger{
+        display: block;
+    }
+    .menu{
+        display: none;
+        position: fixed;
+        width: 100% !important;
+        height: 100vh;
+    }
+    .app{
+        height: 100%;
+    }
+    .about{
+        .text{
+            padding-top: 100px;
+        }
+        .skills{
+            padding: 0 !important;
+            justify-content: space-around !important;
+            align-items: center;
+            div{
+                flex-basis: 50% !important;
+                padding: auto;
+            }
+        }
+    }
+}
