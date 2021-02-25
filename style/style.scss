@@ -45,6 +45,7 @@ body{
         display: flex;
         padding: 20px;
         align-items: center;
+        justify-content: center;
         border-radius: 10px;
         a{
             padding-left: 10px;
@@ -229,6 +230,7 @@ body{
         height: 100vh;
         z-index: 9;
         .link{
+            margin: auto;
             width: 80% !important;
             a{
                 padding-left: 0 !important;
