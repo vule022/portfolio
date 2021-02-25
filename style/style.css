@@ -183,6 +183,11 @@ body {
   display: none;
 }
 
+.content .contact {
+  height: 100vh;
+  padding-top: 100px;
+}
+
 .content .contact ul {
   padding-top: 50px;
   list-style: none;
