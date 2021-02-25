@@ -273,6 +273,7 @@ body {
     position: fixed;
     width: 100% !important;
     height: 100vh;
+    z-index: 99999;
   }
   .app {
     height: 100%;
